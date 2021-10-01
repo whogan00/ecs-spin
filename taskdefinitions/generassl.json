@@ -19,10 +19,8 @@
        }
      ],
      "dockerLabels": {
-        "com.datadoghq.ad.instances": "[{\"bucket\":\"datadog-healthcheck-bucket\", \"type\":\"eis_jks\", \"cluster\":\"test-cluster\",\"client\":\"cs\",\"environment\":\"dev\",\"region\": \"us-east-1\", \"min_collection_interval\": 3600}]",
         "com.datadoghq.ad.check_names": "[\"s3\"]",
         "com.datadoghq.ad.init_configs": "[{}]",
-        "com.datadoghq.ad.logs": "[{\"source\": \"tomcat\", \"log_processing_rules\": [{\"type\": \"multi_line\", \"name\": \"log_start_with_date\", \"pattern\": \"\\\\d{2}-\\\\w{3}-\\\\d{4}|^Completed|^\\\\u001b\\\\[0|^TASK|^PLAY\"}]}]",
         "com.datadoghq.tags.service": "generalssb",
         "com.datadoghq.tags.env": "test",
         "com.datadoghq.tags.ecs_cluster": "test-cluster"
