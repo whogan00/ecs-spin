@@ -1,29 +1,25 @@
-[
-   {
-     "name": "nginx",
-     "image": "nginx:1.19.7",
-     "memory": 64,
-     "cpu": 128,
-     "essential": true,
-     "logConfiguration": {
-       "logDriver": "json-file",
-       "options": {
-         "max-size": "100m",
-         "max-file": "2"
-       }
-     },
-     "portMappings": [
-       {
-         "containerPort": 80,
-         "protocol": "tcp"
-       }
-     ],
-     "dockerLabels": {
-        "com.datadoghq.ad.check_names": "[\"s3\"]",
-        "com.datadoghq.ad.init_configs": "[{}]",
-        "com.datadoghq.tags.service": "generalssb",
-        "com.datadoghq.tags.env": "test",
-        "com.datadoghq.tags.ecs_cluster": "test-cluster"
-      }
-   }
-]
+[{
+	"name": "nginx",
+	"image": "nginx:1.19.7",
+	"memory": 64,
+	"cpu": 128,
+	"essential": true,
+	"logConfiguration": {
+		"logDriver": "json-file",
+		"options": {
+			"max-size": "100m",
+			"max-file": "2"
+		}
+	},
+	"portMappings": [{
+		"containerPort": 80,
+		"protocol": "tcp"
+	}],
+	"dockerLabels": {
+		"com.datadoghq.ad.check_names": "[\"s3\"]",
+		"com.datadoghq.ad.init_configs": "[{}]",
+		"com.datadoghq.tags.service": "generalssb",
+		"com.datadoghq.tags.env": "test",
+		"com.datadoghq.tags.ecs_cluster": "test-cluster"
+	}
+}]
